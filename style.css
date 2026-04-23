@@ -1,0 +1,13 @@
+@import "tailwindcss";
+
+@font-face {
+  font-family: "dahyeon";
+  src: url("/fonts/dahyeon.woff2") format("woff2");
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+@theme {
+  --font-hand: "dahyeon", "sans-serif";
+  --color-hand: #403f54;
+}
