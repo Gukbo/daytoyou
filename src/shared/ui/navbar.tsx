@@ -1,11 +1,14 @@
 import { LogoIcon } from "@/shared/assets";
 import { NavLink } from "react-router-dom";
+import { MessageCircleMore } from "lucide-react";
+import { CalendarDays } from "lucide-react";
+import { Menu } from "lucide-react";
 
 export default function Navbar() {
   return (
-    <div className="flex flex-col justify-center items-center ">
-      <div className="flex flex-row w-90 items-start  justify-between">
-        <div>
+    <div className="flex flex-col justify-center items-center mt-1">
+      <div className="flex flex-row w-90 items-center justify-between">
+        <div className="flex flex-row items-center justify-center">
           <NavLink className="w-fit h-fit" to="/">
             <img
               src={LogoIcon}
@@ -14,10 +17,16 @@ export default function Navbar() {
             />
           </NavLink>
         </div>
-        <div className="flex flex-row items-center mr-8 justify-center">
-          <NavLink to="/">1</NavLink>
-          <NavLink to="/">2</NavLink>
-          <button>3</button>
+        <div className="flex flex-row mr-8 items-center gap-2 justify-center">
+          <NavLink to="/">
+            <MessageCircleMore className="size-5 text-hand group-hover:scale-110 transition-transform" />
+          </NavLink>
+          <NavLink to="/">
+            <CalendarDays className="size-5 text-hand group-hover:scale-110 transition-transform" />
+          </NavLink>
+          <button>
+            <Menu className="size-5 text-hand group-hover:scale-110 transition-transform cursor-pointer" />
+          </button>
         </div>
       </div>
     </div>
